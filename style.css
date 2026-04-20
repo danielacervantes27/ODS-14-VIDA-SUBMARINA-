@@ -1,0 +1,63 @@
+// --- LÓGICA DEL CARRUSEL ---
+let currentSlideIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+
+    // Manejo de límites
+    if (index >= slides.length) { currentSlideIndex = 0; }
+    if (index < 0) { currentSlideIndex = slides.length - 1; }
+
+    // Ocultar todos los slides y desactivar dots
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    // Mostrar slide actual y dot activo
+    slides[currentSlideIndex].classList.add('active');
+    dots[currentSlideIndex].classList.add('active');
+}
+
+function moveSlide(n) {
+    currentSlideIndex += n;
+    showSlide(currentSlideIndex);
+}
+
+function currentSlide(n) {
+    currentSlideIndex = n;
+    showSlide(currentSlideIndex);
+}
+
+// Auto-play del carrusel (opcional, muy Web 2.0)
+setInterval(() => {
+    moveSlide(1);
+}, 6000); // Cambia cada 6 segundos
+
+
+// --- LÓGICA DE NAVEGACIÓN POR PESTAÑAS (CORREGIDO) ---
+function showTab(tabId) {
+    // 1. Ocultar todas las secciones
+    const tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    // 2. Desactivar todos los botones de navegación
+    const btns = document.querySelectorAll('.nav-btn');
+    btns.forEach(btn => btn.classList.remove('active'));
+
+    // 3. Activar el seleccionado (sección)
+    document.getElementById(tabId).classList.add('active');
+    
+    // 4. Marcar botón como activo
+    event.currentTarget.classList.add('active');
+    
+    // Resetear el carrusel al inicio si volvemos a 'inicio'
+    if (tabId === 'inicio') {
+        currentSlideIndex = 0;
+        showSlide(0);
+    }
+}
+
+// Iniciar carrusel al cargar la página
+window.onload = function() {
+    showSlide(0);
+};
