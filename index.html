@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODS 14 - Vida Submarina | Frutiger Aero Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-wrapper bubble-bg">
+        <header class="frutiger-header">
+            <div class="logo">
+                <h1>OCEAN <span>14</span></h1>
+            </div>
+            <nav class="frutiger-nav">
+                <button class="nav-btn active" onclick="showTab('inicio')">Inicio</button>
+                <button class="nav-btn" onclick="showTab('ods')">ODS 14</button>
+                <button class="nav-btn" onclick="showTab('equipo')">Equipo</button>
+                <button class="nav-btn" onclick="showTab('acerca')">Acerca de</button>
+            </nav>
+        </header>
+
+        <div class="marquee-container">
+            <marquee scrollamount="6">"Sin azul no hay verde. Si el océano muere, nosotros morimos." — Sylvia Earle • ODS 14: Vida Submarina • Protejamos nuestros mares</marquee>
+        </div>
+
+        <main class="content-box">
+            
+            <section id="inicio" class="tab-content active">
+                <h2 class="section-title">¿Por qué este sitio web?</h2>
+                
+                <div id="frutiger-carousel" class="carousel-container glass-card bubble-effect">
+                    <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <img src="submarina1.jpg" alt="Vida Submarina 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="submarina2.jpg" alt="Vida Submarina 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="submarina3.jpg" alt="Vida Submarina 3">
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev shine-effect" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="carousel-btn next shine-effect" onclick="moveSlide(1)">&#10095;</button>
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="currentSlide(0)"></span>
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                    </div>
+                </div>
+
+                <div class="glass-inner top-brillo">
+                    <p>Este sitio nace de la urgencia de dar voz al ODS 14. Los océanos regulan el clima y generan el 50% del oxígeno que respiramos.</p>
+                </div>
+                
+                <div class="grid-2">
+                    <div class="glass-inner bubble-effect">
+                        <h3>Nuestra Misión</h3>
+                        <p>Educar sobre la gestión sostenible de los recursos marinos para frenar la contaminación por plásticos.</p>
+                    </div>
+                    <div class="glass-inner top-brillo">
+                        <h3>Datos Clave</h3>
+                        <ul>
+                            <li>Absorben el 30% del CO2.</li>
+                            <li>Hogar de 200,000 especies.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cta-banner bubble-effect">
+                    <h3>¡Es hora de actuar!</h3>
+                    <button class="action-button shine-effect">Unirse al Cambio</button>
+                </div>
+
+                <div class="conclusion-box top-brillo">
+                    <p><strong>Conclusión:</strong> Proteger el océano es una necesidad para la supervivencia humana.</p>
+                </div>
+            </section>
+
+            <section id="ods" class="tab-content">
+                <h2 class="section-title">En qué consiste la ODS 14</h2>
+                <div class="glass-inner bubble-effect">
+                    <p>El Objetivo 14 busca conservar y utilizar sosteniblemente los océanos y mares.</p>
+                    <ul class="meta-list">
+                        <li><strong>🌊 Reducción de basura:</strong> Evitar la contaminación química y de plásticos.</li>
+                        <li><strong>🐠 Áreas protegidas:</strong> Aumentar las zonas de conservación marina.</li>
+                        <li><strong>⚖️ Pesca Sostenible:</strong> Terminar con la pesca excesiva e ilegal.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="equipo" class="tab-content">
+                <h2 class="section-title">Quiénes Somos</h2>
+                <div class="team-container">
+                    <div class="member-card glass-card bubble-effect">
+                        <div class="avatar-glow">AD</div>
+                        <h3>Aurea Daniela Cervantes Lara</h3>
+                        <p class="role">Directora de Estrategia Marina</p>
+                    </div>
+                    <div class="member-card glass-card top-brillo">
+                        <div class="avatar-glow">AC</div>
+                        <h3>Ángela Camila Salazar Castañeda</h3>
+                        <p class="role">Coordinadora de Investigación</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="acerca" class="tab-content">
+                <h2 class="section-title">Acerca de</h2>
+                <div class="glass-inner top-brillo">
+                    <p>Plataforma educativa creada para la difusión de los Objetivos de Desarrollo Sostenible (Agenda 2030).</p>
+                    <p><em>Estética: Frutiger Aero (Skeuomorphic Aqua).</em></p>
+                    <p style="font-size: 0.8rem; margin-top:10px;">Versión 3.0 con Carrusel Aqua</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="frutiger-footer">
+            <p>&copy; 2026 ODS 14 Project - Inspirado en el Futuro del Mar</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
